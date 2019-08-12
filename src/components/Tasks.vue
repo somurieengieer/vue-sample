@@ -2,19 +2,28 @@
   <div>
     <div>Test Task List page.</div>
     <button v-on:click="addTodo">Add Task</button>
-    <div v-for="todo in todos">
-      <p>{{todo.taskName}}</p>
-    </div>
+    <ul v-if="todos.length">
+      <TaskItem v-for="todo in todos"
+                :key="todo.id"
+                :todo="todo"
+                />
+    </ul>
   </div>
 </template>
 
 <script>
-  var Todo = function (name) {
+  import TaskItem from "@/components/TaskItem";
+  let Todo = function (id, name) {
+    this.id = id;
     this.taskName = name;
     this.done = false;
   }
+
+  let idCounter = 0
+
   export default {
     name: 'Tasks',
+    components: {TaskItem},
     data() {
       return {
         todos: []
@@ -22,7 +31,7 @@
     },
     methods: {
       addTodo: function () {
-        this.todos.push(new Todo('Test'))
+        this.todos.push(new Todo(idCounter++, 'Test'))
       }
     }
   }
