@@ -1,6 +1,7 @@
 <template>
   <li>
     {{todo.taskName}}
+    <button @click="$emit('remove', todo.id)">x</button>
   </li>
 </template>
 

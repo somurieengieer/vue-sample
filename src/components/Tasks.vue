@@ -6,6 +6,7 @@
       <TaskItem v-for="todo in todos"
                 :key="todo.id"
                 :todo="todo"
+                @remove="removeTodo"
                 />
     </ul>
   </div>
@@ -32,6 +33,11 @@
     methods: {
       addTodo: function () {
         this.todos.push(new Todo(idCounter++, 'Test'))
+      },
+      removeTodo(idToRemove) {
+        this.todos = this.todos.filter(todo => {
+          return todo.id !== idToRemove
+        })
       }
     }
   }
