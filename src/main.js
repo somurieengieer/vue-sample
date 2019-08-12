@@ -13,3 +13,8 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+var Project = function(name) {
+  this.projectName = name;
+  this.todos = [];
+}

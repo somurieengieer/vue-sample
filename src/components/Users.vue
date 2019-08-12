@@ -1,13 +1,31 @@
 <template>
   <div>
     <div>Test User's page.</div>
+    <button v-on:click="addTodo">Add Task</button>
+    <div v-for="todo in todos">
+      <p>{{todo.taskName}}</p>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Users'
-}
+  var Todo = function (name) {
+    this.taskName = name;
+    this.done = false;
+  }
+  export default {
+    name: 'Users',
+    data() {
+      return {
+        todos: []
+      }
+    },
+    methods: {
+      addTodo: function () {
+        this.todos.push(new Todo('Test'))
+      }
+    }
+  }
 </script>
 
 <style scoped>
