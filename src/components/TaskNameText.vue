@@ -17,7 +17,7 @@
     computed: {
       listeners() {
         return {
-          // Pass all component listeners directly to input
+          // エンターキー押下時に親コンポーネントの@keydown.enterを呼ぶ
           ...this.$listeners,
           /* 新しい値で独自のinputイベントを創出する */
           // input: this.$emit('input', 'hoge') // このように書いたら'hoge'に書き換わって送出される
