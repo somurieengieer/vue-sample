@@ -1,7 +1,9 @@
 <template>
   <div>
     <div>Test Task List page.</div>
-    <TaskNameText v-model="newTaskName" />
+    <TaskNameText v-model="newTaskName"
+                  @keydown.enter="addTodo"
+    />
     <button v-on:click="addTodo">Add Task</button>
     <ul v-if="todos.length">
       <TaskItem v-for="todo in todos"
@@ -39,6 +41,7 @@
         if (newTaskName) {
           this.todos.push(new Todo(idCounter++, newTaskName))
         }
+        this.newTaskName = ''
       },
       removeTodo(idToRemove) {
         this.todos = this.todos.filter(todo => {
