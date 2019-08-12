@@ -1,8 +1,7 @@
 <template>
   <div>
     <div>Test Task List page.</div>
-    <TaskNameText v-model="newTaskName"
-    />
+    <TaskNameText v-model="newTaskName" />
     <button v-on:click="addTodo">Add Task</button>
     <ul v-if="todos.length">
       <TaskItem v-for="todo in todos"
