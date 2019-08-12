@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>Test User's page.</div>
+    <div>Test Task List page.</div>
     <button v-on:click="addTodo">Add Task</button>
     <div v-for="todo in todos">
       <p>{{todo.taskName}}</p>
@@ -14,7 +14,7 @@
     this.done = false;
   }
   export default {
-    name: 'Users',
+    name: 'Tasks',
     data() {
       return {
         todos: []

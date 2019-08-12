@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Users from '@/components/Users'
+import Tasks from '@/components/Tasks'
 
 Vue.use(Router)
 
@@ -13,8 +13,8 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/users',
-      component: Users
+      path: '/tasks',
+      component: Tasks
     }
   ]
 })

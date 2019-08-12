@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <router-link to="/users">Go To Users Page</router-link>
+    <router-link to="/tasks">Go To Task List</router-link>
     <p>Routerを使用する画面遷移の場合、aタグではなくrouter-linkタグを使用する。画面は遷移せず、router-view内がリンク先の内容に切り替わる</p>
     <ul>
       <li>
