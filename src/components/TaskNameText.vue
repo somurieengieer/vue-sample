@@ -9,6 +9,7 @@
   export default {
     name: "TaskNameText",
     props: {
+      /* valueにしないと親コンポーネント側で値取得ができない？ */
       value: {
         type: String,
         default: ''
