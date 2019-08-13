@@ -1,8 +1,10 @@
 This project sampled for study
 
 ## Sample Feature
+This system has bellowing features.
 
-Not yet
+- Create new Todo
+- Delete Todo
 
 
 ## Build Setup
